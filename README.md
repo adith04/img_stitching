@@ -1,12 +1,9 @@
-# IQ Vision 
+# Stitching
 
-IQ Vision is a ros package designed to help teach how to integrate opencv applications into intelligent drone applications. PLease see the [iq_tutorials](https://github.com/Intelligent-Quads/iq_tutorials) repo for tutorials on using the iq_vision package. 
+The stitching ros package is designed to stitch together images captured by multiple cameras on a drone, creating a seamless panoramic view. This package includes two main programs:
 
-![canny](imgs/canny.png)
+# Programs
 
-## Example Programs
+- panorama.py - This script is responsible for stitching the images. It takes the individual images from the drone's cameras and combines them into a single, continuous panoramic image using an iterative stitching process.
 
-- canny_edge_sol.cpp - example opencv program designed to show how to subscribe to a ROS image stream and run opencv vision processing on live image stream data. 
-
-    
-
+- yolo_detections.py - This script handles object detection within the stitched panoramic image. It uses the YOLOv8 model to detect and identify various objects, drawing masks on them for easy visualization.
