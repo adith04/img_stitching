@@ -1,50 +1,9 @@
-# EECS486Project
+# Computer Vision Image Stitching Full Simulation Setup
 
-Welcome EECS 486 Staff!
+Hello! The following is a full setup for an image stitching program for a drone in Gazebo.
+If you are not currently operating on Linux or have not setup Linux on a virtual machine, visit the following link to set this up:
 
-## Motivation
-Football podcasts can get quite long, and can cover many topics in one episode. Michigan fans may only want to hear talk about specific topics, such as position groups or players. Our goal is to create these segments automatically, so people can know where to look for the topics they want. 
-
-## Project Pipeline
-There are 3 main components of the project that work in sequence to process a podcast episode - transcription, labeling, and merging the results. The podcast is first transcribed using transcribe_google.py, which sends the mp3 file to google's text-to-speech AI. This API returns a list of sentences, as well as timestamps for the beginning and end of each sentence. Then, in merge_classifications.py, each sentence is fed into our pre-trained, fine-tuned TinyBert instance, which returns a classification for the sentence using the functions in classify_sentences.py. This model was trained in a Google Colab notebook (linked further below), and the final model was downloaded to be used for evaluation on a local machine. To merge the results in merge_classification.py, we combine the sentences into groups of 10, find the most common topic classification across those 10 sentences, and label the entire podcast segment with that label. This process is repeated for all segment groups in the podcast. Consecutive segments with the same topic are merged into one larger segment, and the final list of segment classifications and corresponding timestamps is output to a .txt file. 
-
-## Repository Structure:
-
-This repository contains a variety of folders and files. Below is a high level explanation of what all these folder contain and their purpose towards the project. 
-
-deprecated/ - Contains scripts ultimately not used in the final project
-
-evaluation/ - Contains scripts and manually verified podcast segment data
-
-in_the_trenches_episode_... - These folders were output by transcribe_google.py and contain audio transcription files used to effectively segment a podcast episode by topic 
-
-model_directory/ - Contains configuration information related to our custom langugage model
-
-training/ - All of the project's article training data and related scripts are here
-
-.gitignore - Ensures credentials and virtual environment are not pushed to GitHub
-
-classify_sentences.py - Uses custom language model to classify a sentence into predetermined categories
-
-example_sentences.txt - Sample input file for classify_sentences.py
-
-merge_classification.py - Uses sentence information of a .mp3 file and the custom language model's classifications of those sentences to create podcast topic segments
-
-README.md - File containing project information and instructions for running on a local machine
-
-requirements.txt - Contains all Python packages required 
-
-transcribe_google.py - Transcribes .mp3 file into sentences
-
-transcribe_podcast_options.txt - Lists all .mp3 files that transcribe_google.py can operate on since they are stored in a Google Cloud bucket associated with 'credentials.json'
-
-## Data Sources
-
-The Google Drive link below contains all of the original .mp3 files that our project is based on. 
-
-Podcast Google Drive Link: https://drive.google.com/drive/folders/19mEX01TQiWGeWlyIJ3WRptGCBnGYmI4-?usp=sharing
-
-## Setting Up the Project:
+## Setting Up ArduPilot:
 
 1) Clone this GitHub repository to your local machine.
 
