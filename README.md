@@ -43,9 +43,57 @@ sim_vehicle.py -w
 ```
 To exit the program, enter Ctrl C in the command line.
 
-## Running the Project:
+## Setting Up ROS and the Environment:
 
-There are a couple key Python programs that make up the project pipeline. This guide takes you step by step through it along with relevant explanations and instructions for each script.  
+Open a terminal and enter in the following commands:
+```bash
+cd ~
+```
+```bash
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
+```
+```bash
+wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
+```
+```bash
+sudo apt update
+```
+```bash
+sudo apt-get install gazebo11 libgazebo11-dev
+```
+```bash
+git clone https://github.com/khancyr/ardupilot_gazebo.git
+```
+```bash
+cd ardupilot_gazebo
+```
+```bash
+mkdir build
+```
+```bash
+cd build
+```
+```bash
+cmake ..
+```
+```bash
+make -j4
+```
+```bash
+sudo make install
+```
+```bash
+echo 'source /usr/share/gazebo/setup.sh' >> ~/.bashrc
+```
+```bash
+. ~/.bashrc
+```
+```bash
+make -j4
+```
+```bash
+make -j4
+```
 
 ### training/crawl.py
 
