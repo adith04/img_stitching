@@ -193,8 +193,3 @@ The results of this evaluation should be shown in the terminal. These metrics ar
 
 ## Contact
 For any questions/concerns about this project please contact the team at the following email addresses:
-bbrdak@umich.edu
-rajchan@umich.edu
-radithya@umich.edu
-rohanxg@umich.edu
-ncurdo@umich.edu
