@@ -36,43 +36,39 @@ sim_vehicle.py -w
 ```
 To exit the program, enter Ctrl C in the command line
 
-## Setting Up ROS and the Environment:
+## Setting Up ROS Environment:
 
 Open a terminal and enter commands as follows:
 ```bash
 cd ~
 ```
+Ensure ros packages recognized
 ```bash
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 ```
+Setup keys
 ```bash
 wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 ```
+Keep packages up to date
 ```bash
 sudo apt update
 ```
+Install gazebo11
 ```bash
 sudo apt-get install gazebo11 libgazebo11-dev
 ```
+Clone ardupilot_gazebo repository
 ```bash
 git clone https://github.com/khancyr/ardupilot_gazebo.git
 ```
+Build package
 ```bash
 cd ardupilot_gazebo
-```
-```bash
 mkdir build
-```
-```bash
 cd build
-```
-```bash
 cmake ..
-```
-```bash
 make -j4
-```
-```bash
 sudo make install
 ```
 ```bash
@@ -82,11 +78,61 @@ echo 'source /usr/share/gazebo/setup.sh' >> ~/.bashrc
 . ~/.bashrc
 ```
 ```bash
-make -j4
+cd
 ```
 ```bash
-make -j4
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 ```
+```bash
+sudo apt install curl
+```
+```bash
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+```
+```bash
+sudo apt update
+```
+```bash
+sudo apt install ros-noetic-desktop-full
+source /opt/ros/noetic/setup.bash
+echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+Install python dependencies
+```bash
+sudo apt-get install python3-wstool python3-rosinstall-generator python3-catkin-lint python3-pip python3-catkin-tools
+```
+```bash
+pip3 install osrf-pycommon
+```
+Create workspace
+```bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws
+catkin init
+wstool init ~/catkin_ws/src
+```
+Setup mavros and mavlink
+```bash
+rosinstall_generator --upstream mavros | tee /tmp/mavros.rosinstall
+rosinstall_generator mavlink | tee -a /tmp/mavros.rosinstall
+wstool merge -t src /tmp/mavros.rosinstall
+wstool update -t src
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src --rosdistro `echo $ROS_DISTRO` -y
+```
+Build workspace
+```bash
+catkin build
+```
+Add to .bashrc and source
+```bash
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+
 
 ### training/crawl.py
 
