@@ -131,6 +131,13 @@ Add to .bashrc and source
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
+export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
+export PATH=$PATH:$HOME/.local/bin
+export GAZEBO_MODEL_PATH=/home/adiram/ardupilot_gazebo/models:/home/adiram/cat>
+export GAZEBO_MODEL_PATH=~/gazebo_ws/gazebo_models:${GAZEBO_MODEL_PATH}
+export PATH=/usr/local/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
 
 
 
