@@ -5,16 +5,34 @@ If you are not currently operating on Linux or have not setup Linux on a virtual
 
 ## Setting Up ArduPilot:
 
-1) Clone this GitHub repository to your local machine.
+Open a terminal and make sure you are in the home directory. Then run all the following commands.
 
 ```bash
-git clone git@github.com:rchandra20/eecs486-final-project.git
+cd ~
 ```
-
-2) Install all the necessary Python packages needed to run this project via pip3
-
 ```bash
-pip3 install -r requirements.txt
+sudo apt install git
+```
+```bash
+sudo apt install git
+```
+```bash
+sudo apt install git
+```
+```bash
+sudo apt install git
+```
+```bash
+sudo apt install git
+```
+```bash
+sudo apt install git
+```
+```bash
+sudo apt install git
+```
+```bash
+sudo apt install git
 ```
 
 ## Running the Project:
