@@ -5,7 +5,7 @@ If you are not currently operating on Linux or have not setup Linux on a virtual
 
 ## Setting Up ArduPilot:
 
-Open a terminal and make sure you are in the home directory. Then run all the following commands.
+Open a terminal and make sure you are in the home directory. Then run all the following commands:
 
 ```bash
 cd ~
@@ -14,26 +14,34 @@ cd ~
 sudo apt install git
 ```
 ```bash
-sudo apt install git
+git clone https://github.com/ArduPilot/ardupilot.git
 ```
 ```bash
-sudo apt install git
+cd ardupilot
 ```
 ```bash
-sudo apt install git
+Tools/environment_install/install-prereqs-ubuntu.sh -y
 ```
 ```bash
-sudo apt install git
+. ~/.profile
 ```
 ```bash
-sudo apt install git
+git config --global url.https://.insteadOf git://
 ```
 ```bash
-sudo apt install git
+git checkout Copter-4.0.4
 ```
 ```bash
-sudo apt install git
+git submodule update --init --recursive
 ```
+```bash
+cd ArduCopter
+```
+Use this command to ensure simulation is working:
+```bash
+sim_vehicle.py -w
+```
+To exit the program, enter Ctrl C in the command line.
 
 ## Running the Project:
 
