@@ -5,26 +5,25 @@ If you are not currently operating on Linux or have not setup Linux on a virtual
 
 ## Setting Up ArduPilot:
 
-Open a terminal and make sure you are in the home directory. Then run all the following commands:
-
+Open a terminal and make sure you are in the home directory. Then run the commands as follows:
 ```bash
 cd ~
 ```
+Install git.
 ```bash
 sudo apt install git
 ```
+Clone the ardupilot repository.
 ```bash
 git clone https://github.com/ArduPilot/ardupilot.git
 ```
+Install prereqs.
 ```bash
 cd ardupilot
-```
-```bash
 Tools/environment_install/install-prereqs-ubuntu.sh -y
-```
-```bash
 . ~/.profile
 ```
+Configure
 ```bash
 git config --global url.https://.insteadOf git://
 ```
