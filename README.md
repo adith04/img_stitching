@@ -131,12 +131,32 @@ Add to .bashrc and source
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 ```
-export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models
-export PATH=$PATH:$HOME/.local/bin
+Install geographiclib
+```bash
+sudo ~/catkin_ws/src/mavros/mavros/scripts/install_geographiclib_datasets.sh
+```
+Clone simulation repository and build workspace
+```bash
+git clone -b main https://github.com/adith04/simulation.git
+catkin build
+```
+Source .bashrc
+```bash
+source ~/.bashrc
+```
+Add to end of .bashrc and source
+```bash
+echo "export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models" >> ~/.bashrc
+echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
+
+echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
+
 export GAZEBO_MODEL_PATH=/home/adiram/ardupilot_gazebo/models:/home/adiram/cat>
 export GAZEBO_MODEL_PATH=~/gazebo_ws/gazebo_models:${GAZEBO_MODEL_PATH}
 export PATH=/usr/local/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+source ~/.bashrc
+```
 
 
 
