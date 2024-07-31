@@ -9,42 +9,36 @@ Open a terminal and make sure you are in the home directory. Then run the comman
 ```bash
 cd ~
 ```
-Install git.
+Install git
 ```bash
 sudo apt install git
 ```
-Clone the ardupilot repository.
+Clone the ardupilot repository
 ```bash
 git clone https://github.com/ArduPilot/ardupilot.git
 ```
-Install prereqs.
+Install prereqs
 ```bash
 cd ardupilot
 Tools/environment_install/install-prereqs-ubuntu.sh -y
 . ~/.profile
 ```
-Configure
+Checkout Copter
 ```bash
 git config --global url.https://.insteadOf git://
-```
-```bash
 git checkout Copter-4.0.4
-```
-```bash
 git submodule update --init --recursive
 ```
+Check if simulation works
 ```bash
 cd ArduCopter
-```
-Use this command to ensure simulation is working:
-```bash
 sim_vehicle.py -w
 ```
-To exit the program, enter Ctrl C in the command line.
+To exit the program, enter Ctrl C in the command line
 
 ## Setting Up ROS and the Environment:
 
-Open a terminal and enter in the following commands:
+Open a terminal and enter commands as follows:
 ```bash
 cd ~
 ```
