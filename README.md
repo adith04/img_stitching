@@ -148,9 +148,7 @@ Add to end of .bashrc and source
 ```bash
 echo "export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models" >> ~/.bashrc
 echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
-
-echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
-
+echo "export GAZEBO_MODEL_PATH=/home/$USER/ardupilot_gazebo/models:/home/$USER/catkin_ws/src/simulation/models" >> ~/.bashrc
 export GAZEBO_MODEL_PATH=/home/adiram/ardupilot_gazebo/models:/home/adiram/cat>
 export GAZEBO_MODEL_PATH=~/gazebo_ws/gazebo_models:${GAZEBO_MODEL_PATH}
 export PATH=/usr/local/cuda/bin:$PATH
