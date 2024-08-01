@@ -149,13 +149,30 @@ Add to end of .bashrc and source
 echo "export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models" >> ~/.bashrc
 echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
 echo "export GAZEBO_MODEL_PATH=/home/$USER/ardupilot_gazebo/models:/home/$USER/catkin_ws/src/simulation/models" >> ~/.bashrc
-export GAZEBO_MODEL_PATH=/home/adiram/ardupilot_gazebo/models:/home/adiram/cat>
-export GAZEBO_MODEL_PATH=~/gazebo_ws/gazebo_models:${GAZEBO_MODEL_PATH}
-export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+echo "export GAZEBO_MODEL_PATH=~/gazebo_ws/gazebo_models:${GAZEBO_MODEL_PATH}" >> ~/.bashrc
+echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> ~/.bashrc
 source ~/.bashrc
 ```
+Copy startsitl.sh to home directory
 
+sudo usermod -a -G dialout $UdSER
+
+sudo apt-get remove modemmanager
+
+wget https://s3-us-west-2.amazonaws.com/qgroundcontrol/latest/QGroundControl.AppImage
+
+chmod +x ./QGroundControl.AppImage 
+
+./QGroundControl.AppImage
+
+cd catkin_ws/src
+
+Git clone -b main https://github.com/adith04/stitching.git
+
+Cd ..
+
+Catkin build
 
 
 
