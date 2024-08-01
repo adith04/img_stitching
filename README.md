@@ -162,7 +162,7 @@ Paste it to your home directory
 ![Alt text](https://github.com/adith04/stitching/raw/master/second.png)
 
 
-## Install QGroundControl (Optional)
+## Install QGroundControl (Optional):
 ```bash
 sudo usermod -a -G dialout $USER
 sudo apt-get remove modemmanager
@@ -180,7 +180,7 @@ To run enter
 ./QGroundControl.AppImage
 ```
 
-## Clone stitching repository
+## Clone stitching repository:
 ```bash
 cd catkin_ws/src
 ```
@@ -194,5 +194,5 @@ cd ..
 catkin build
 ```
 
-## Contact
+## Contact:
 For any questions/concerns about this project please contact me at the following email address: radithya@umich.edu
