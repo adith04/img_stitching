@@ -194,5 +194,10 @@ cd ..
 catkin build
 ```
 
+## Running panorama.py and object_detections.py
+```bash
+pip install ultralytics
+```
+
 ## Contact:
 For any questions/concerns about this project please contact me at the following email address: radithya@umich.edu
