@@ -1,7 +1,7 @@
 # Computer Vision Image Stitching Full Simulation Setup
 
 Hello! The following is a full setup for an image stitching program for a drone in Gazebo.
-If you are not currently operating on Linux or have not setup Linux on a virtual machine, visit the following link to set this up: [Virtual Box Ubuntu Setup](https://github.com/adith04/stitching/raw/master/.pdf)
+If you are not currently operating on Linux or have not setup Linux on a virtual machine, visit the following link to set this up: [Virtual Box Ubuntu Setup](https://github.com/adith04/stitching/raw/master/Installing_virtual_box.pdf)
 
 
 ## Setting Up ArduPilot:
