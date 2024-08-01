@@ -155,7 +155,11 @@ echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> ~/.bashrc
 source ~/.bashrc
 ```
-Copy startsitl.sh to home directory
+Copy startsitl.sh from the simulation directory
+![Alt text](https://github.com/adith04/stitching/raw/master/first.png)
+Paste it to your home directory 
+![Alt text](https://github.com/adith04/stitching/raw/master/second.png)
+
 
 ## Install QGroundControl (Optional)
 ```bash
