@@ -157,6 +157,7 @@ source ~/.bashrc
 ```
 Copy startsitl.sh from the simulation directory
 ![Alt text](https://github.com/adith04/stitching/raw/master/first.png)
+
 Paste it to your home directory 
 ![Alt text](https://github.com/adith04/stitching/raw/master/second.png)
 
