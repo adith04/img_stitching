@@ -49,8 +49,6 @@ class YOLODetector:
                 x1, y1, x2, y2 = map(int, box)
                 cv2.rectangle(cv_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
                 class_name = self.class_names[int(label)]
-                if class_name == 'airplane':
-                    class_name = 'car'
                 label_text = f"{class_name} {score:.2f}"
                 cv2.putText(cv_image, label_text, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
