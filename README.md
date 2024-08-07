@@ -150,8 +150,6 @@ Add to end of .bashrc and source
 ```bash
 echo "export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models" >> ~/.bashrc
 echo "export GAZEBO_MODEL_PATH=/home/$USER/ardupilot_gazebo/models:/home/$USER/catkin_ws/src/simulation/models" >> ~/.bashrc
-echo "export PATH=/usr/local/cuda/bin:$PATH" >> ~/.bashrc
-echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH" >> ~/.bashrc
 source ~/.bashrc
 ```
 Copy startsitl.sh from the simulation directory
