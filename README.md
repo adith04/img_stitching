@@ -138,6 +138,7 @@ sudo ~/catkin_ws/src/mavros/mavros/scripts/install_geographiclib_datasets.sh
 ```
 Clone simulation repository and build workspace
 ```bash
+cd src
 git clone -b main https://github.com/adith04/simulation.git
 catkin build
 ```
