@@ -192,11 +192,34 @@ cd ..
 catkin build
 ```
 
-## Running panorama.py and object_detections.py
-panorama.py and object_detections.py are both python programs located in the stitching package. panorama.py stitches together the images obtained from the cameras and publishes them under the /stitched_image topic. object_detections.py publishes an image, to the /detections topic, containing bounding boxes around any objects detected in the stitched image.
+## Running panorama.py and yolo_detection.py
+panorama.py and yolo_detection.py are both python programs located in the stitching package. panorama.py stitches together the images obtained from the cameras and publishes the stitched image under the "/stitched_image" topic. object_detections.py publishes to two different topics: "/yolo/detections" topic and the "/yolo_mask" topic. The "/yolo/detections" topic contains an image with bounding boxes around objects detected in the stitched image. The "/yolo/mask" topic contains a mask of the objects detected.
+
+Install ultralytics
 ```bash
 pip install ultralytics
 ```
+Run a simulation world (here is an example of running the hills world)
+```bash
+roslaunch simulation hills.launch
+```
+Open a new terminal and navigate to the stitching package
+```bash
+cd catkin_ws/src/stitching/src
+```
+Run panorama.py
+```bash
+python3 panorama.py
+```
+Open a new terminal and navigate to the stitching package
+```bash
+cd catkin_ws/src/stitching/src
+```
+Run yolo_detections.py
+```bash
+python3 yolo_detections.py
+```
+
 
 ## Contact:
 For any questions/concerns about this project please contact me at the following email address: radithya@umich.edu
