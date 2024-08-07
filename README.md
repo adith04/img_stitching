@@ -220,6 +220,12 @@ Run yolo_detections.py
 python3 yolo_detections.py
 ```
 
+Now if you open another terminal and type the following command:
+```bash
+rqt_image_view
+```
+you should be able to view the contents of several topics. Under the "/stitched_image", "/yolo/detections", and "/yolo_mask" topics, you should be able to view the stitched image, the detected objects, and the mask, respectively.
+
 
 ## Contact:
 For any questions/concerns about this project please contact me at the following email address: radithya@umich.edu
