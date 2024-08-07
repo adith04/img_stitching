@@ -193,6 +193,7 @@ catkin build
 ```
 
 ## Running panorama.py and object_detections.py
+panorama.py and object_detections.py are both python programs located in the stitching package. panorama.py stitches together the images obtained from the cameras and publishes them under the /stitched_image topic. object_detections.py publishes an image, to the /detections topic, containing bounding boxes around any objects detected in the stitched image.
 ```bash
 pip install ultralytics
 ```
