@@ -165,6 +165,7 @@ Paste it to your home directory
 
 ## Install QGroundControl (Optional):
 ```bash
+cd
 sudo usermod -a -G dialout $USER
 sudo apt-get remove modemmanager
 ```
