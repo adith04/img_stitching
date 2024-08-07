@@ -24,7 +24,7 @@ cd ardupilot
 Tools/environment_install/install-prereqs-ubuntu.sh -y
 . ~/.profile
 ```
-Checkout Copter
+Checkout copter
 ```bash
 git config --global url.https://.insteadOf git://
 git checkout Copter-4.0.4
